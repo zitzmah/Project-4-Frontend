@@ -7,25 +7,27 @@ export default function Show(props) {
     const id = aBlog?.url.split("/")[4]
 
     return(
-        <div>
+        <div className="center-content">
         <h1>{aBlog.subject}</h1>
-        <p>{aBlog.content}</p>
+        <img src={aBlog.image_url}/>
+        <p>{aBlog.details}</p>
         <div>
             <Form action={`/update/${id}/`} method="POST">
                 <label htmlFor="subject">
                     Change the Title of the Post
-                    <input type="text" id="subject" name="subject" defaultValue={aBlog.name}/>
+                    <input type="text" id="subject" name="subject" defaultValue={aBlog.subject}/>
                 </label>
 
                 <label htmlFor="details">
                     Edit the Post
-                    <input type="details" id="details" name="details" defaultValue={aBlog.details} className="edit-box"/>
+                    <textarea id="details" name="details" defaultValue={aBlog.details} className="edit-box"></textarea>
                 </label>
 
                 <label htmlFor="image_url">
                     Edit the Image URL
-                    <input type="text" id="image_url" name="image_url" defaultValue={aBlog.image_url}/>
+                    <input type="text" name="image_url" id="image_url" defaultValue={aBlog.image_url}/>
                 </label>
+
 
                 <button style={{"backgroundColor": "blue"}}>Update Your Post</button>
             </Form>

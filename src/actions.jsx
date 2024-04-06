@@ -29,7 +29,7 @@ export async function updateAction({ request, params }) {
     const updatedBlog = {
         subject: formData.get("subject"),
         details: formData.get("details"),
-        image: formData.get("image_url")
+        image_url: formData.get("image_url"),
     }
     await fetch(`${URL}${id}/`, {
         method: "PUT",
