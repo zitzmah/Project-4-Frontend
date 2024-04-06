@@ -1,6 +1,7 @@
 import Blog from "../components/Blog"
 import { Form, useLoaderData } from "react-router-dom"
 import { useState } from "react"
+import '../index.css'
 
 export default function Index(props) {
     const allBlogs=useLoaderData()
@@ -12,14 +13,14 @@ export default function Index(props) {
 
     return(
         <>
-        <h1>Index</h1>
+        <h1>Strong Body Strong Mind</h1>
         <hr/>
         <h1>Add a Post</h1>
         <Form action="/create" method="post">
             
             <label htmlFor="subject">
                 Title:
-                <input type="text" subject="subject" id="subject"/>
+                <input type="text" name="subject" id="subject"/>
             </label>
 
             <label htmlFor="details">

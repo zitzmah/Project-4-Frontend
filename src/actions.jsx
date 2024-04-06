@@ -38,7 +38,7 @@ export async function updateAction({ request, params }) {
         },
         body: JSON.stringify(updatedBlog)
     })
-    return redirect(`./`)
+    return redirect(`/`)
 }
 
 //Delete Action

@@ -7,7 +7,13 @@ export default function Blog({blog}){
     return(
         <div>
             <Link to={`/blogs/${id}`}>
-                <h1>{blog.subject}</h1>
+                <div className="blog">
+                    <h2>{blog.subject}</h2>
+                    <div className="imageContainer">
+                        <img src={blog.image_url} alt="Blog Image"/>
+                    </div>
+                    <p>{blog.details}</p>
+                </div>
             </Link>
         </div>
     )

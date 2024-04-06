@@ -1,4 +1,6 @@
 import { Link, Form, useLoaderData } from "react-router-dom"
+import Blog from '../components/Blog'
+import '../show.css'
 
 export default function Show(props) {
     const aBlog = useLoaderData()
@@ -17,7 +19,7 @@ export default function Show(props) {
 
                 <label htmlFor="details">
                     Edit the Post
-                    <input type="details" id="details" name="details" defaultValue={aBlog.details}/>
+                    <input type="details" id="details" name="details" defaultValue={aBlog.details} className="edit-box"/>
                 </label>
 
                 <label htmlFor="image_url">
@@ -33,7 +35,7 @@ export default function Show(props) {
             </Form>
         </div>
         <Link to="/">
-            <button>Go Back</button>
+            <button style={{"backgroundColor": "blue"}}>Go Back</button>
         </Link>
         </div>
     )
